@@ -1,0 +1,22 @@
+body{margin: 0; font-family: 'Poppins',sans-serif;background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("juice.jpg") no-repeat center/cover;color:red; }
+header {background: linear-gradient(to right, #3e2723, #6f4e37);color: white;text-align: center;padding: 15px;}
+header h1 {font-family: 'Pacifico',cursive;font-size: 35px;}
+nav a {color: white;margin: 10px;text-decoration: none;font-weight: bold;}
+.banner{background: #ff914d;color: white;text-align: center;padding: 8px;font-weight: bold;}
+.slider {height: 300px;overflow: hidden;}
+.slides {width: 100%;height: 300px;object-fit: cover;display: none;}
+.hero {text-align: center;padding: 40px;}
+.btn {background: #ff914d;padding: 10px 20px;color: white;border-radius: 20px;text-decoration: none;}
+.menu {display: flex;flex-wrap: wrap;justify-content: center;}
+.card {width: 220px;margin: 10px;background: white;border-radius: 10px;overflow: hidden;text-align: center;box-shadow: 0 3px 10px rgba(0,0,0,0.2);transition: 0.3s;}
+card:hover {transform: scale(1.05);}
+.card img {width: 100%;}
+.price {color: #ff5e00;font-weight: bold;}
+.reviews {text-align: center;padding: 30px;background: #fff3e6;}
+.review-card {background: white;margin: 10px auto;width: 250px;padding: 10px;border-radius: 10px;}
+.order {text-align: center;padding: 30px;}
+.order form {display: flex;flex-direction: column;width: 280px;margin: auto;}
+.order input, select,textarea {margin: 5px;padding: 10px;}
+.order button {background: #6f4e37;color: white;padding: 10px;border: none;}
+.whatsapp {position: fixed;bottom: 15px;right: 15px;background: #25D366;color: white;padding: 12px;border-radius: 50px;text-decoration: none;}
+@media (max-width: 768px){.menu{flex-direction: column;align-items: center;} .card{width:90%;} }

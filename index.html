@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Campus Bites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=pacifico&display=swap"rel="stylesheet"><meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Campus Bites</h1>
+        <nav>
+            <a href="index.html">Home</a>
+             <a href="menu.html">Menu</a>
+              <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="banner">Fresh Food . Fast Service . Affordable Prices</div>
+    <div class="Slider">
+        <img class="slides" src="images/coffee.jpg">
+        <img class="slides" src="images/icecream.jpg">
+        <img class="slides" src="images/cake.jpg">
+        <img class="slides" src="images/juice.jpg">
+        <img class="slides" src="images/snacks.jpg">
+    </div>
+    <section class="hero">
+        <h2>Welcome to Campus Bites</h2>
+        <p>Fresh yogurt, creamy icecream, rich coffee, tasty cakes and refreshing juices</p>
+        <a href="menu.html" class="btn">Explore Menu</a>
+    </section>
+    <section class="reviews">
+        <h2>Campus Favourites</h2>
+        <p>What Kyambogo students love most about Campus Bites</p>
+        <div class="review-card">
+            "Best coffee in Campus!"
+            <h4>Student A</h4>
+        </div>
+        <div class="review-card">
+            "Ice cream is amazing"
+            <h4>Student B</h4>
+        </div>
+        <div class="review-card">
+            "Fresh juice every morning"
+            <h4>Student C</h4>
+        </div>
+        <div class="review-card">
+            "Snacks very good"
+            <h4>Student D</h4>
+        </div>
+    </section>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i <slides.length; i++) {slides[i].style.display ="none";}
+            slideIndex++; if (slideIndex > slides.length) slideIndex = 1;
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides,3000);
+        }
+    </script>
+    <a href="https://wa.me/256762363314" class="whatsapp">Order on WhatsApp</a>
+</body>
+</html>
