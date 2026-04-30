@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html >
 <head>
-    <title>Campus Bites</title>
+    <title>Campus Bites | Coffee, Juice & Snacks at Kyambogo University</title>
+    <meta name="description"content="Campus Bites at FPT Canteen, Kyambogo University offers affordable snacks, juice, and meals for students in Uganda. Fast, fresh, and budget-friendly food near Campus.">
+    <meta name="keywords" content="Campus food Uganda, Kyambogo food, meals, snacks near campus, juice, affordable food Uganda">
+    <meta name="author" content="Campus Bites">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=pacifico&display=swap"rel="stylesheet"><meta name="viewport"content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="application/Id+json">
+        {
+            "@context": "https://schema.org", "@type": "Restaurant" "name": "Campus Bites", "image": "olupot-hub.github.io/campus-bites/coffee.jpg",
+            "address": {
+                "@type": "PostalAddress", "streetAddress": "FPT Canteen, Kyambogo University", "addressLocality":"Kampala","addressLocality":"Uganda"
+            }
+            "ServicesCuisine": "Snacks, Coffee, Juice, Cakes, Coffee","priceRange": "UGX 1000-6000", "telephone":"+256762363314"
+        }
+    </script>3
+    <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXX');
+    </script>
+    
 </head>
 <body>
     <header>
-        <h1>Campus Bites</h1>
+        <h1>Affordable & Delicious Campus Food in at Kyambogo University</h1>
+        <h2>Best Coffee, Juice,Snacks & Cakes on Campus</h2>
+        <p>Welcome to Campus Bites at FPT Canteen Kyambogo Universitys! We provide tasty snacks, fresh juice, and affordable meals for students. Whether you need a quick bite or a full meal, we've got you covered.</p>
         <nav>
             <a href="index.html">Home</a>
              <a href="menu.html">Menu</a>
@@ -16,17 +40,23 @@
     </header>
     <div class="banner">Fresh Food . Fast Service . Affordable Prices</div>
     <div class="Slider">
-        <img class="slides" src="coffee.jpg">
-        <img class="slides" src="icecream.jpg">
-        <img class="slides" src="cake.jpg">
-        <img class="slides" src="juice.jpg">
-        <img class="slides" src="snacks.jpg">
-         <img class="slides" src="yogurt.jpg">
+        <img class="slides" src="coffee.jpg"alt="Hot coffee for students near campus in Kampala">
+        <img class="slides" src="icecream.jpg"alt="Delicious ice cream for students">
+        <img class="slides" src="cake.jpg"alt="Affordable cake for students in Kampala">
+        <img class="slides" src="juice.jpg"alt="Fresh juice near campus">
+        <img class="slides" src="snacks.jpg"alt="Affordable snacks for students in Uganda nera campus">
+         <img class="slides" src="yogurt.jpg"alt="Fresh yogurt for students near campus in Kampala">
     </div>
     <section class="hero">
         <h2>Welcome to Campus Bites</h2>
         <p>Fresh yogurt, creamy icecream, rich coffee, tasty cakes and refreshing juices</p>
         <a href="menu.html" class="btn">Explore Menu</a>
+    </section>
+    <section>
+        <h2>Latest from Campus Bites</h2>
+        <p>Best places to get coffee at Kyambogo University</p>
+        <p>Top snacks every students loves on campus</p>
+        <p>Why fresh juice is perfect for your study break</p>
     </section>
     <section class="reviews">
         <h2>Campus Favourites</h2>
@@ -48,6 +78,12 @@
             <h4>Student D</h4>
         </div>
     </section>
+    <section>
+        <h1>Find Us at Kyambogo University</h1>
+        <p>
+            Visit Campus Bites at FPT Canteen, Kyambogo University in Kampala for the best coffee, snacks,cakes & fresh juice on campus.
+        </p>
+    </section>
     <script>
         let slideIndex = 0;
         showSlides();
@@ -59,5 +95,22 @@
         }
     </script>
     <a href="https://wa.me/256762363314" class="whatsapp">Order on WhatsApp</a>
+    <script>
+        function sendToWhatsApp(){
+            let name = document.getElementById("name").value;
+            let phone = document.getElementById("phone").value;
+            let item = document.getElementById("item").value;
+            let quantity = document.getElementById("quantity").vale;
+            let message = document.getElementById("message").value;
+            let url = "https://wa.me/256762363314?text="
+            + "New Order from Campus Bites:%0a"
+            + "Name: " + name +"%0a"
+            + "phone:" + phone + "%0a"
+            + "Item:" + item + "%0a"
+            + "Quantity: " + quantity + "%0a"
+            + "Message: " + message;
+            window.open(url,"_blank");
+        }
+    </script>
 </body>
 </html>

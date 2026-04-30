@@ -1,0 +1,42 @@
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - Campus Bites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Admin Dashboard</h1>
+</header>
+
+<h2 style="text-align:center;">Orders</h2>
+
+<div id="orders" style="padding:20px;"></div>
+
+<script>
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+let container = document.getElementById("orders");
+
+if (orders.length === 0) {
+    container.innerHTML = "<p>No orders yet</p>";
+} else {
+    orders.forEach(order => {
+        container.innerHTML += `
+            <div style="background:white; color:black; margin:10px; padding:10px;">
+                <p><strong>Name:</strong> ${order.name}</p>
+                <p><strong>Phone:</strong> ${order.phone}</p>
+                <p><strong>Item:</strong> ${order.item}</p>
+                <p><strong>Quantity:</strong> ${order.quantity}</p>
+                <p><strong>Message:</strong> ${order.message}</p>
+            </div>
+        `;
+    });
+}
+</script>
+
+</body>
+</html>

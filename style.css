@@ -1,4 +1,4 @@
-body{margin: 0; font-family: 'Poppins',sans-serif;background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("juice.jpg") no-repeat center/cover;color:red; }
+body{margin: 0; font-family: 'Poppins',sans-serif;background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("juice.jpg") no-repeat center/cover;color:rgb(255, 0, 0); }
 header {background: linear-gradient(to right, #3e2723, #6f4e37);color: white;text-align: center;padding: 15px;}
 header h1 {font-family: 'Pacifico',cursive;font-size: 35px;}
 nav a {color: white;margin: 10px;text-decoration: none;font-weight: bold;}

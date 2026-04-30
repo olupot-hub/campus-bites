@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact - Campus Bites</title>
+    <title>Contact Campus Bites | FPA Canteen Kyambogo University</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,20 +15,26 @@
     </header>
     <section class="order">
         <h2>Place Your Order</h2>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="tel" placeholder="Phone Number">
+        <form
+        onsubmit="sendToWhatsApp();
+        return false;">
+        <input type="text"
+        id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <section id="item" required>
+            <option value="">Select Item</option>
             <select>
-                <option>Select Item</option>
-                <option>Coffee</option>
-                <option>ice Cream</option>
-                <option>Yogurt</option>
-                <option>Juice</option>
-                <option>Snacks</option>
-            </select>
-            <input type="number" placeholder="Quantity">
-            <textarea placeholder="Location / Message"></textarea>
-            <button type="submit">Send Order</button>
+            <option>Select Item</option>
+            <option>Coffee</option>
+            <option>Ice Cream</option>
+            <option>Yogurt</option>
+            <option>Juice</option>
+        </select>
+        </section>
+        <input type="number" id="quantity" placeholder="quantity" required>
+        <textarea  id="message" placeholder="Location / Message">
+        </textarea>
+        <button type="submit">Send Order</button>  
         </form>
     </section>
     <section class="contact">
@@ -45,6 +51,30 @@
         <h2>Find Us Here</h2>
                 <iframe src="https://maps.google.com/maps?q=Kyambogo%20Univerty&t=&z=15&ie=UTF8&iwloc=&output=embed"width="100%" height="300"></iframe>
     </section>
+    <script>
+function sendToWhatsApp() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let item = document.getElementById("item").value;
+    let quantity = document.getElementById("quantity").value;
+    let message = document.getElementById("message").value;
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    orders.push({
+        name, phone, item, quantity, message
+    });
+
+    localStorage.setItem("orders", JSON.stringify(orders));
+    let url = "https://wa.me/256762363314?text="
+        + "New Order:%0a"
+        + "Name: " + name + "%0a"
+        + "Item: " + item + "%0a"
+        + "Quantity: " + quantity;
+
+    window.open(url, "_blank");
+}
+</script>
+
     
 </body>
 </html>
